@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script src="app.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Meme Generator</title>
+</head>
+    <body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Meme Generator</h1>
+            <p class="lead">This meme generator takes a URL and adds text the top and bottom.</p>
+        </div>
+    </div>
+    <div class="container">
+        <form>
+            <div class="form-group">
+                <label for="image-url">Image URL</label>
+                <input type="url" class="form-control" id="image-url" placeholder="http://....">
+            </div>
+            <div class="form-group">
+                <label for="top-text">Top Text</label>
+                <textarea class="form-control" id="top-text" placeholder="this cat..." rows="2"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="bottom-text">Bottom Text</label>
+                <textarea class="form-control" id="bottom-text" placeholder="... is awesome" rows="2"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <section class="container" id="submitted-memes">
+        <img src="" alt="hello">
+    </section>
+</body>
+</html>
