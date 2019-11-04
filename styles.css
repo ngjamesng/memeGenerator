@@ -25,7 +25,12 @@ section#submitted-memes img {
 }
 
 .caption {
+	font-family: "IMPACT";
+	font-size: 50px;
 	color: white;
+	font-weight: 900;
+	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: black;
 }
 
 .top-caption {
