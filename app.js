@@ -37,8 +37,10 @@ document.addEventListener("DOMContentLoaded", () => {
 		let image = document.createElement("img");
 		image.setAttribute("src", url);
 		meme.appendChild(image);
+		//add delete event listener
+		meme.addEventListener("click", deleteMeme);
 	}
-	// clear input fields
+	// handle clearing form
 	function clearInputFields() {
 		url.value = "";
 		topText.value = "";
@@ -47,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	// handle delete
 	function deleteMeme(meme) {
-		//click on any inner text or image to delete meme
+		//click on any inner text or image, and delete
 		meme.target.parentElement.remove();
 	}
 });
