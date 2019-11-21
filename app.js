@@ -5,12 +5,15 @@ document.addEventListener("DOMContentLoaded", () => {
 		topText = document.querySelector("#top-text-input"),
 		bottomText = document.querySelector("#bottom-text-input");
 	// individual images
-	const submittedMemes = document.querySelector("#submitted-memes");
+	const submittedMemes = document.querySelector("#submitted-memes"),
+		memes = document.querySelectorAll(".meme");
 
-	// handle Submit
+	// event listeners for submit and delete
 	form.addEventListener("submit", submit);
+	memes.forEach((meme) => meme.addEventListener("click", deleteMeme));
+	// handle submit
 	function submit(event) {
-		event.preventDefault();
+		event.preventDefault(); //prevent refreshing of the page
 		createMeme(url.value, topText.value, bottomText.value);
 		clearInputFields();
 	}
@@ -20,10 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
 		let meme = document.createElement("div");
 		meme.setAttribute("class", "meme");
 		submittedMemes.appendChild(meme);
-		// append image to the meme/div
-		let image = document.createElement("img");
-		image.setAttribute("src", url);
-		meme.appendChild(image);
 		// add top text
 		let top = document.createElement("div");
 		top.setAttribute("class", "caption top-caption");
@@ -34,11 +33,21 @@ document.addEventListener("DOMContentLoaded", () => {
 		bottom.setAttribute("class", "caption bottom-caption");
 		bottom.innerText = bottomText;
 		meme.appendChild(bottom);
+		// append image to the meme/div
+		let image = document.createElement("img");
+		image.setAttribute("src", url);
+		meme.appendChild(image);
 	}
 	// clear input fields
 	function clearInputFields() {
 		url.value = "";
 		topText.value = "";
 		bottomText.value = "";
+	}
+
+	// handle delete
+	function deleteMeme(meme) {
+		//click on any inner text or image to delete meme
+		meme.target.parentElement.remove();
 	}
 });

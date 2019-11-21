@@ -8,8 +8,8 @@ section#submitted-memes {
 	margin-top: 30px;
 }
 
-section#submitted-memes div.meme {
-	/* width: 150px; */
+div.meme {
+	background: gray;
 	position: relative;
 	margin: 20px 30px;
 	border: 5px solid black;
