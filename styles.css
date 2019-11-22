@@ -16,6 +16,12 @@ div.meme {
 	border-radius: 2%;
 	display: flex;
 	justify-content: center;
+	transition: 0.3s;
+}
+
+.meme:hover {
+	background: black;
+	opacity: .2;
 }
 
 section#submitted-memes img {
