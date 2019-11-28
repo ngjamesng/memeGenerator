@@ -37,6 +37,11 @@ document.addEventListener("DOMContentLoaded", () => {
 		let image = document.createElement("img");
 		image.setAttribute("src", url);
 		meme.appendChild(image);
+		// add delete button
+		let deleteButton = document.createElement("div");
+		deleteButton.innerText = "click to close";
+		deleteButton.setAttribute("class", "close-button");
+		meme.appendChild(deleteButton);
 		//add delete event listener
 		meme.addEventListener("click", deleteMeme);
 	}
