@@ -3,6 +3,7 @@ section#submitted-memes {
 	display: flex;
 	flex-wrap: wrap;
 	margin-top: 30px;
+	align-items: flex-start;
 }
 
 .meme {
@@ -15,6 +16,13 @@ section#submitted-memes {
 	transition: 0.2s;
 }
 .close-button {
+	background: black;
+	justify-content: center;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	text-align: center;
 	position: absolute;
 	font-family: "IMPACT";
 	font-size: 60px;
@@ -25,7 +33,7 @@ section#submitted-memes {
 }
 
 .close-button:hover {
-	opacity: 1;
+	opacity: 0.7;
 	transition: 0.2s;
 }
 
