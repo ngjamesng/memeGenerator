@@ -9,14 +9,19 @@ section#submitted-memes {
 .meme {
 	position: relative;
 	margin: 20px 30px;
-	border: 5px solid black;
-	border-radius: 2%;
 	display: flex;
 	justify-content: center;
 	transition: 0.2s;
 }
+
+.meme img {
+	border: 5px solid black;
+	border-radius: 2%;
+}
+
 .close-button {
 	background: black;
+	border-radius: 2%;
 	justify-content: center;
 	display: flex;
 	align-items: center;
